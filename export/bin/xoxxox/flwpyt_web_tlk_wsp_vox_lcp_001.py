@@ -19,7 +19,7 @@ async def tlkweb():
   datstt = await MidClt.reqprc({"keymmd": datwav["keymmd"], "keyprc": "xoxxox.PrcStt.cnnstt", "server": "http://xoxxox_sttwsp", "config": "xoxxox/config_sttwsp_000"}, adrmid + MidClt.adrprc) # 音声認識
   datres = await MidClt.reqget({"keymmd": datstt["keymmd"]}, adrmid + MidClt.adrget) # DBG
   print("> " + datres.decode('utf-8'), flush=True) # DBG
-  datttt = await MidClt.reqprc({"keymmd": datstt["keymmd"], "keyprc": "xoxxox.PrcTtt.cnnttt", "server": "http://xoxxox_tttlcp", "config": "xoxxox/config_tttlcp_001"}, adrmid + MidClt.adrprc) # 言語生成
+  datttt = await MidClt.reqprc({"keymmd": datstt["keymmd"], "keyprc": "xoxxox.PrcTtt.cnnttt", "server": "http://xoxxox_tttlcp", "config": "xoxxox/config_tttlcp_sis001"}, adrmid + MidClt.adrprc) # 言語生成
   datres = await MidClt.reqget({"keymmd": datttt["keymmd"]}, adrmid + MidClt.adrget) # DBG
   print("< " + datres.decode('utf-8'), flush=True) # DBG
   dattts = await MidClt.reqprc({"keymmd": datttt["keymmd"], "keyprc": "xoxxox.PrcTts.cnntts", "server": "http://xoxxox_ttsvox", "config": "xoxxox/config_ttsvox_036"}, adrmid + MidClt.adrprc) # 音声合成
